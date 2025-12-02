@@ -1,230 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Varshitha Ambu — Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varshitha Ambu | Portfolio</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    :root{
-      --primary:#0a1a3c;
-      --accent:#0a5cff;
-      --muted:#6b7280;
-      --card:#ffffff;
-      --bg:#f8fafc;
-    }
-    body{
-      font-family:"Poppins",system-ui,Arial;
-      background:var(--bg);
-      color:#111827;
+    body {
+      background: #f4f7ff;
+      font-family: "Segoe UI", sans-serif;
+      scroll-behavior: smooth;
     }
 
-    /* Header */
-    .site-header{
-      background:linear-gradient(90deg,var(--primary),#17428b);
-      color:#fff;
-      padding:64px 16px;
-      text-align:center;
-    }
-    .site-header h1{font-weight:600;margin:0;font-size:2.6rem}
-    .site-header p{opacity:.95;margin-top:8px}
-
-    /* container */
-    .wrap{max-width:1000px;margin:40px auto;padding:0 18px}
-
-    /* section title */
-    .section-title{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      font-weight:600;
-      color:var(--primary);
-      margin-bottom:18px;
-    }
-    .section-title .bar{width:6px;height:30px;background:var(--primary);border-radius:3px}
-
-    /* cards */
-    .card-portfolio{
-      background:var(--card);
-      border-radius:12px;
-      padding:20px;
-      box-shadow:0 6px 22px rgba(13,18,30,0.06);
-      transition:transform .18s ease, box-shadow .18s ease;
-    }
-    .card-portfolio:hover{
-      transform:translateY(-6px);
-      box-shadow:0 14px 40px rgba(13,18,30,0.10);
+    /* Navbar */
+    .navbar {
+      background: #0a1a3c !important;
     }
 
-    /* projects grid */
-    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-
-    /* certificates */
-    .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-    .cert-card{
-      background:#fff;border-radius:10px;padding:14px;border:1px solid rgba(15,23,42,0.04);
-      display:flex;align-items:center;gap:12px;
+    .navbar a {
+      color: white !important;
+      font-weight: 500;
     }
-    .cert-icon{
-      width:54px;height:54px;border-radius:8px;background:linear-gradient(180deg,#eef6ff,#e2efff);
-      display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--primary)
+
+    /* Header Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      color: white;
+      background: linear-gradient(135deg, #0a1a3c, #143d70);
     }
-    .cert-card h6{margin:0;font-size:0.98rem}
-    .cert-card p{margin:0;font-size:0.85rem;color:var(--muted)}
 
-    /* skills */
-    .skill-badge{display:inline-block;background:#eef2ff;color:var(--primary);padding:6px 10px;border-radius:999px;margin:6px 6px 6px 0;font-weight:600;font-size:.88rem}
+    .hero img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      object-fit: cover;
+    }
 
-    /* contact */
-    .contact a{color:var(--accent);text-decoration:none}
-    .muted{color:var(--muted)}
+    h2.section-title {
+      color: #0a1a3c;
+      border-left: 6px solid #0a1a3c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
 
-    @media (max-width:520px){
-      .site-header{padding:40px 12px}
-      .site-header h1{font-size:1.9rem}
+    .project-box {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .certificate-link {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: #0a1a3c;
+      color: white;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="wrap">
-      <h1>Varshitha Ambu</h1>
-      <p>B.Tech CSE — Frontend Developer & Web Dev Enthusiast (3rd Year)</p>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Varshitha</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <!-- MAIN -->
-  <main class="wrap">
+<!-- HERO SECTION -->
+<section class="hero">
+  <img src="assets/profile.jpg" alt="Profile Photo"> <!-- CHANGE THIS -->
+  <h1 class="mt-3">Varshitha Ambu</h1>
+  <p>B.Tech CSE | Frontend & Web Development Enthusiast | 3rd Year</p>
 
-    <!-- ABOUT -->
-    <section class="mb-4">
-      <div class="section-title"><div class="bar"></div><div>About Me</div></div>
-      <div class="card-portfolio">
-        <p>I am a passionate web development student with strong hands-on skills in HTML, CSS and JavaScript and beginner level backend knowledge in Python/Flask. Looking for frontend/web dev internships where I can apply and grow my skills on real projects.</p>
-      </div>
-    </section>
+  <a href="resume/Varshitha_Ambu_Resume.pdf" class="btn btn-warning mt-2" target="_blank">📄 Download Resume</a>
+</section>
 
-    <!-- SKILLS -->
-    <section class="mb-4">
-      <div class="section-title"><div class="bar"></div><div>Skills</div></div>
-      <div class="card-portfolio">
-        <div class="mb-2">
-          <span class="skill-badge">HTML</span>
-          <span class="skill-badge">CSS</span>
-          <span class="skill-badge">JavaScript</span>
-          <span class="skill-badge">Bootstrap</span>
-          <span class="skill-badge">Python (basic)</span>
-          <span class="skill-badge">Flask (beginner)</span>
-        </div>
-        <p class="muted">Tools: GitHub • VS Code • Jupyter • Google Colab</p>
-      </div>
-    </section>
+<div class="container mt-5">
 
-    <!-- PROJECTS -->
-    <section class="mb-4">
-      <div class="section-title"><div class="bar"></div><div>Projects</div></div>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>I am a passionate Web Development student with hands-on experience in HTML, CSS, JavaScript and beginner-level backend experience in Python & Flask. I am actively seeking Frontend/Web Development internships to apply my skills and grow professionally.</p>
+  </section>
 
-      <div class="projects-grid">
-        <div class="card-portfolio">
-          <h5>AI Fake News Detector</h5>
-          <p class="muted"><strong>Tech:</strong> Python, ML, Flask (backend), HTML/CSS/JS frontend, External APIs</p>
-          <p>ML-based system that classifies news headlines as Real or Fake, returns a confidence score and lists verified sources. Backend and API keys are kept private for security; frontend and demo are public.</p>
-          <a href="https://github.com/Varsha516/Fake_news_detector" target="_blank" rel="noopener">View on GitHub</a>
-        </div>
+  <!-- SKILLS -->
+  <section id="skills" class="mt-4">
+    <h2 class="section-title">Skills</h2>
+    <ul>
+      <li><b>Frontend:</b> HTML, CSS, JavaScript</li>
+      <li><b>Backend Basics:</b> Python, Flask (Beginner)</li>
+      <li><b>Tools:</b> GitHub, Google Colab, Jupyter Notebook, VS Code</li>
+      <li><b>Soft Skills:</b> Communication, Leadership, Teamwork</li>
+    </ul>
+  </section>
 
-        <div class="card-portfolio">
-          <h5>Online Safety Awareness Website</h5>
-          <p class="muted"><strong>Tech:</strong> HTML, CSS, Python (content), Educational UI</p>
-          <p>A student-focused website that explains phishing, password hygiene and safe browsing practices with posters and interactive content. Useful for outreach and awareness programs.</p>
-          <a href="https://github.com/Varsha516/Online-Safety-Awareness" target="_blank" rel="noopener">View on GitHub</a>
-        </div>
-      </div>
-    </section>
+  <!-- PROJECTS -->
+  <section id="projects" class="mt-4">
+    <h2 class="section-title">Projects</h2>
 
-    <!-- CERTIFICATES -->
-    <section class="mb-4">
-      <div class="section-title"><div class="bar"></div><div>Certificates</div></div>
-      <div class="card-portfolio">
-        <div class="cert-grid">
-          <!-- Certificate 1 (you provided blob link) -->
-          <a class="cert-card" href="https://github.com/Varsha516/Varshithaambu.github.io/blob/main/certificates/Artificial%20Intelligence_%20Concepts%20and%20Techniques.pdf" target="_blank" rel="noopener">
-            <div class="cert-icon">AI</div>
-            <div>
-              <h6>Artificial Intelligence — Concepts & Techniques</h6>
-              <p class="muted">Stanford / edX (PDF)</p>
-            </div>
-          </a>
+    <div class="project-box">
+      <h3>AI Fake News Detector</h3>
+      <p><b>Technologies:</b> Python, Machine Learning, Flask, APIs</p>
+      <p>A machine learning project that classifies news as real or fake using a trained ML model. Includes API-based reliability checks using search engines. The project provides verified sources, confidence scores, and an interactive UI.</p>
+      <a href="https://github.com/Varsha516/Fake_news_detector" target="_blank">View on GitHub</a>
+    </div>
 
-          <!-- Certificate 2: placeholder — REPLACE href with your file's URL -->
-          <a class="cert-card" href="https://github.com/Varsha516/Varshithaambu.github.io/blob/main/certificates/DSA.pdf" target="_blank" rel="noopener">
-            <div class="cert-icon">DS</div>
-            <div>
-              <h6>DSA Certificate</h6>
-              <p class="muted">Data Structures & Algorithms (PDF)</p>
-            </div>
-          </a>
+    <div class="project-box">
+      <h3>Online Safety Awareness Website</h3>
+      <p><b>Technologies:</b> HTML, Python</p>
+      <p>A web project focused on cyber safety awareness, covering phishing, passwords, privacy, and secure internet practices. Strengthened my web dev basics and content design skills.</p>
+      <a href="https://github.com/Varsha516/Online-Safety-Awareness" target="_blank"> View on GitHub</a>
+    </div>
 
-          <!-- Certificate 3 -->
-          <a class="cert-card" href="https://github.com/Varsha516/Varshithaambu.github.io/blob/main/certificates/html,css,js-edx.pdf" target="_blank" rel="noopener">
-            <div class="cert-icon">WEB</div>
-            <div>
-              <h6>Web Dev — HTML/CSS/JS</h6>
-              <p class="muted">IBM / edX (PDF)</p>
-            </div>
-          </a>
+  </section>
 
-          <!-- Certificate 4 -->
-          <a class="cert-card" href="https://github.com/Varsha516/Varshithaambu.github.io/blob/main/certificates/python-edx.pdf" target="_blank" rel="noopener">
-            <div class="cert-icon">Py</div>
-            <div>
-              <h6>Python Programming</h6>
-              <p class="muted">edX (PDF)</p>
-            </div>
-          </a>
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="mt-4">
+    <h2 class="section-title">Certificates</h2>
 
-        </div>
-        <p class="mt-3 muted small">Click any certificate to open the PDF (in new tab).</p>
-      </div>
-    </section>
+    <div class="certificate-link">
+      <a href="certificates/Artificial Intelligence_ Concepts and Techniques.pdf" target="_blank">Artificial Intelligence – NPTEL</a>
+    </div>
 
-    <!-- EDUCATION -->
-    <section class="mb-4">
-      <div class="section-title"><div class="bar"></div><div>Education</div></div>
-      <div class="card-portfolio">
-        <ul style="margin:0;padding-left:18px">
-          <li><strong>B.Tech — Computer Science & Engineering</strong>, JNTUACEP (2023–2027) — CGPA: 8.98</li>
-          <li><strong>Intermediate (MPC)</strong> — AP Model Junior College — 97.9%</li>
-          <li><strong>SSC</strong> — AP Model School — 97%</li>
-        </ul>
-      </div>
-    </section>
+    <div class="certificate-link">
+      <a href="certificates/Algorithms Specialization Certificate.pdf" target="_blank"> Algorithms Specialization – Stanford</a>
+    </div>
 
-    <!-- CONTACT -->
-    <section class="mb-5">
-      <div class="section-title"><div class="bar"></div><div>Contact</div></div>
-      <div class="card-portfolio contact">
-        <p><strong>Email:</strong> <span class="muted">Varshithaambu79@gmail.com</span></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Varsha516" target="_blank">github.com/Varsha516</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ambu-varshitha" target="_blank">linkedin.com/in/ambu-varshitha</a></p>
-      </div>
-    </section>
+    <div class="certificate-link">
+      <a href="certificates/Web Development with HTML5 CSS3 and JS.pdf" target="_blank"> IBM – Introduction to Web Development</a>
+    </div>
 
-  </main>
+    <div class="certificate-link">
+      <a href="certificates/Python Programming - A Hands on Introduction Certificate.pdf" target="_blank"> Python Programming – Codio (edX)</a>
+    </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </section>
 
-  <!-- OPTIONAL: small helper to convert blob -> raw if you prefer direct PDF open.
-       Example raw URL:
-https://raw.githubusercontent.com/Varsha516/Varshithaambu.github.io/main/certificates/Artificial%20Intelligence_%20Concepts%20and%20Techniques.pdf
-  -->
+  <!-- CONTACT -->
+  <section id="contact" class="mt-4 mb-5">
+    <h2 class="section-title">Contact</h2>
+    <p><b>Email:</b> (add your email)</p>
+    <p><b>GitHub:</b> <a href="https://github.com/Varsha516" target="_blank">github.com/Varsha516</a></p>
+    <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/ambu-varshitha" target="_blank">linkedin.com/in/ambu-varshitha</a></p>
+  </section>
+
+</div>
+
+<footer>
+  © 2025 Varshitha Ambu — Portfolio
+</footer>
+
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
